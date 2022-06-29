@@ -31,9 +31,6 @@ $symbols = [
     "C", "C", "C"
 ];
 
-$i = 0;
-
-
 while($playerTotal >= 0) {
     $makeBet = (readline("Make a bet: "));
     $playerTotal = $playerTotal - $makeBet;
