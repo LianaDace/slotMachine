@@ -16,9 +16,6 @@ function displayBoard(array $board): void
     print_r(" | {$board[2][0]} | {$board[2][1]} | {$board[2][2]} | {$board[2][3]} | {$board[2][4]} | \n ");
 }
 
-$playerTotal = 100;
-$perItem = 0.5;
-
 $credits = [
     "A" => 1,
     "B" => 2,
@@ -30,6 +27,9 @@ $symbols = [
     "B", "B", "B", "B",
     "C", "C", "C"
 ];
+
+$playerTotal = 100;
+$perItem = 0.5;
 
 while($playerTotal >= 0) {
     $makeBet = (readline("Make a bet: "));
@@ -81,7 +81,7 @@ foreach($winLines as $lines){
 }
 echo "You won: " . $prize . PHP_EOL;
 echo "Your total is: " . $playerTotal . PHP_EOL;
-$test = readline("Would you like to continue? y/n");
+$test = readline("Would you like to continue? y/n ");
 if($test === "y"){
     continue;
 }
