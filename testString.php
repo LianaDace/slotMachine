@@ -6,12 +6,11 @@ $bet = 20;
 $koef = $bet / 10;
 $def = 0.5;
 
-$input = "AAAAA";
+$input = "BBBBB";
 $getFirstChar = substr($input, 0, 1);
-echo $getFirstChar;
 $check = str_split($input);
 $countMatching = 0;
-var_dump($check);
+
 
 for($i = 0; $i < strlen($input); $i++){
     if($getFirstChar != $input[$i]){
@@ -20,10 +19,6 @@ for($i = 0; $i < strlen($input); $i++){
         $countMatching = $i + 1;
     }
 }
-var_dump($getFirstChar);
-var_dump($countMatching);
-
-
 
 $prize = [
     "A" => 2,
@@ -34,4 +29,4 @@ $winningSymb = $prize[$getFirstChar] * $countMatching;
 
 $prize = $def * $winningSymb * $koef;
 
-var_dump($winningSymb);
+echo "You got " . "$countMatching" . " " . $getFirstChar . ". You got " . $prize . " coins!" . PHP_EOL;
